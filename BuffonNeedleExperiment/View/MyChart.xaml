@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="BuffonNeedleExperiment.View.MyChart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:BuffonNeedleExperiment.View"
+             mc:Ignorable="d"             
+             x:Name="MyUserControl"
+             Background="#2f2f2f">
+    <Grid>
+        <StackPanel Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Background="#4CFFFFFF" Height="320" VerticalAlignment="Top">
+            <TextBlock Foreground="White" FontSize="16" HorizontalAlignment="Center" Margin="0,20,0,0">Pi Estimation:</TextBlock>
+            <TextBlock Foreground="White" FontSize="30" HorizontalAlignment="Center" Text="{Binding Path=EstimatedPI, ElementName=MyUserControl}"/>
+            <TextBlock Foreground="White" FontSize="16" HorizontalAlignment="Center" Margin="0,20,0,0">Needle Count:</TextBlock>
+            <TextBlock Foreground="White" FontSize="30" HorizontalAlignment="Center" Text="{Binding Path=PointCount, ElementName=MyUserControl}"/>
+            <TextBlock Foreground="White" FontSize="16" HorizontalAlignment="Center" Margin="0,20,0,0">Deviation:</TextBlock>
+            <TextBlock Foreground="White" FontSize="30" HorizontalAlignment="Center" Text="{Binding ElementName=MyUserControl, Path=Deviation}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
